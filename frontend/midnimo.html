@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤝 Midnimo & Iskaashi - Beesha Moolkaal</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ========================================
+                   CSS GUUD
+                ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f8;
+            line-height: 1.8;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+                   HEADER
+                ======================================== */
+        header {
+            background: #0B6B3A;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+            .logo-img img {
+                height: 50px;
+                width: auto;
+            }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .mool {
+            color: #FFD700;
+        }
+
+        .kaal {
+            color: #ffffff;
+        }
+
+        .logo-slogan {
+            font-size: 0.75rem;
+            color: #b8d9c0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                padding: 8px 14px;
+                border-radius: 30px;
+                transition: all 0.3s ease;
+            }
+
+                nav ul li a:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                    transform: translateY(-2px);
+                }
+
+                nav ul li a.active {
+                    background: #FFD700;
+                    color: #0B6B3A;
+                }
+
+        /* ========================================
+                   MAIN CONTENT
+                ======================================== */
+        .main-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========================================
+                   HEADINGS
+                ======================================== */
+        h1 {
+            color: #0B6B3A;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+
+            h1 i {
+                color: #FFD700;
+            }
+
+        h2 {
+            color: #0B6B3A;
+            font-size: 1.8rem;
+            margin-top: 10px;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
+
+        h3 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+
+            h3 i {
+                color: #0B6B3A;
+                margin-right: 8px;
+            }
+
+        /* ========================================
+                   PARAGRAPHS
+                ======================================== */
+        p {
+            color: #334155;
+            font-size: 1.05rem;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+
+        /* ========================================
+                   HIMILOO CARDS (war-bixin)
+                ======================================== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .himilo-card {
+            background: #f8fafc;
+            padding: 22px 20px 20px 20px;
+            border-radius: 14px;
+            border-left: 5px solid #0B6B3A;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: default;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+            .himilo-card:nth-child(1) {
+                animation-delay: 0.4s;
+            }
+
+            .himilo-card:nth-child(2) {
+                animation-delay: 0.5s;
+            }
+
+            .himilo-card:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+
+            .himilo-card:nth-child(4) {
+                animation-delay: 0.7s;
+            }
+
+            .himilo-card:nth-child(5) {
+                animation-delay: 0.8s;
+            }
+
+            .himilo-card:nth-child(6) {
+                animation-delay: 0.9s;
+            }
+
+            .himilo-card:nth-child(7) {
+                animation-delay: 1.0s;
+            }
+
+            .himilo-card:nth-child(8) {
+                animation-delay: 1.1s;
+            }
+
+            .himilo-card:hover {
+                transform: translateY(-6px) scale(1.01);
+                box-shadow: 0 10px 30px rgba(11, 107, 58, 0.2);
+                border-left-color: #FFD700;
+                background: #ecfdf5;
+            }
+
+            .himilo-card .card-icon {
+                display: inline-block;
+                font-size: 1.8rem;
+                color: #0B6B3A;
+                margin-bottom: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .himilo-card:hover .card-icon {
+                transform: rotate(10deg) scale(1.15);
+            }
+
+            .himilo-card h4 {
+                font-size: 1.1rem;
+                color: #0B6B3A;
+                margin-bottom: 6px;
+            }
+
+            .himilo-card p {
+                font-size: 0.95rem;
+                color: #475569;
+                margin-top: 4px;
+                animation: none;
+            }
+
+        /* ========================================
+                   QUOTE BOX
+                ======================================== */
+        .quote-box {
+            background: linear-gradient(135deg, #0B6B3A, #064e3b);
+            color: white;
+            padding: 30px 35px;
+            border-radius: 15px;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(11, 107, 58, 0.3);
+            animation: fadeInUp 0.6s ease 1.2s both;
+            transition: transform 0.3s ease;
+        }
+
+            .quote-box:hover {
+                transform: scale(1.01);
+            }
+
+            .quote-box p {
+                color: #e8f5e9;
+                font-size: 1.3rem;
+                font-style: italic;
+                line-height: 1.8;
+            }
+
+            .quote-box i {
+                color: #FFD700;
+                margin: 0 8px;
+            }
+
+        .quote-author {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 600;
+            color: #FFD700;
+            font-size: 1rem;
+        }
+
+        /* ========================================
+                   BUTTON
+                ======================================== */
+        .btn-back {
+            display: inline-block;
+            margin-top: 25px;
+            background: #0B6B3A;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            animation: fadeInUp 0.6s ease 1.3s both;
+        }
+
+            .btn-back:hover {
+                background: #064e3b;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(11, 107, 58, 0.4);
+            }
+
+            .btn-back i {
+                margin-right: 8px;
+            }
+
+        /* ========================================
+                   FOOTER
+                ======================================== */
+        footer {
+            background: #0a2e1a;
+            color: #b8d9c0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            animation: fadeInUp 0.6s ease 1.4s both;
+        }
+
+            footer p {
+                font-size: 0.9rem;
+                color: #b8d9c0;
+            }
+
+        /* ========================================
+                   RESPONSIVE
+                ======================================== */
+        @media (max-width: 768px) {
+            .header-flex {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+
+                nav ul li a {
+                    font-size: 0.85rem;
+                    padding: 6px 12px;
+                }
+
+            .logo-main {
+                font-size: 1.4rem;
+            }
+
+            .main-container {
+                padding: 25px 18px;
+                margin: 15px 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-box p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 18px 14px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+
+            .himilo-card {
+                padding: 16px 16px;
+            }
+
+                .himilo-card h4 {
+                    font-size: 1rem;
+                }
+
+                .himilo-card p {
+                    font-size: 0.88rem;
+                }
+
+            .quote-box {
+                padding: 20px 18px;
+            }
+
+                .quote-box p {
+                    font-size: 1rem;
+                }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ========================================
+    HEADER
+    ======================================== -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo-img">
+                <img src="images/logo.png" alt="Beesha Moolkaal Logo" onerror="this.style.display='none'" />
+                <span class="logo-text">
+                    <span class="logo-main"><span class="mool">Mool</span><span class="kaal">kaal</span></span>
+                    <span class="logo-slogan">Dhaqan &amp; Horumar</span>
+                </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#services"><i class="fas fa-handshake"></i> Services</a></li>
+                    <li><a href="index.html#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================
+    MAIN CONTENT
+    ======================================== -->
+    <div class="container">
+        <div class="main-container">
+
+            <h1><i class="fas fa-handshake"></i> Midnimo &amp; Iskaashi</h1>
+
+            <h2>Bulsho Midaysan iyo Horumar Wadajir ah</h2>
+
+            <p>
+                Midnimo iyo iskaashi waa tiirka ugu muhiimsan ee lagu dhiso bulsho horumar leh.
+                Bulsho kasta waxay ku gaari kartaa guul marka ay jirto wada shaqayn,
+                is-ixtiraam iyo isku duubni.
+            </p>
+
+            <p>
+                Beesha Moolkaal waxay ku dadaashaa xoojinta xiriirka bulshada,
+                wadajirka dadka, iyo in la abuuro jawi ay ku wada shaqeeyaan
+                dhammaan xubnaha bulshada.
+            </p>
+
+            <h3><i class="fas fa-seedling"></i> Himilooyinka Midnimada:</h3>
+
+            <!-- ========================================
+            HIMILOO CARDS (8 himilo)
+            ======================================== -->
+            <div class="cards-grid">
+
+                <!-- 1 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>🤝 Xoojinta Xiriirka</h4>
+                    <p>Xoojinta xiriirka iyo wada noolaanshaha bulshada si loo dhiso kalsooni iyo isku xirnaan.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4>📚 Taageeridda Waxbarashada</h4>
+                    <p>Taageeridda waxbarashada iyo horumarinta aqoonta dhalinyarada si ay u noqdaan hoggaamiyeyaasha mustaqbalka.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h4>🏗️ Ka qaybqaadashada Mashaariicda</h4>
+                    <p>Ka qaybqaadashada mashaariicda horumarineed ee bulshada si loo wanaajiyo nolosha dadweynaha.</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h4>💡 Xallinta Caqabadaha</h4>
+                    <p>Iskaashi lagu xalliyo caqabadaha bulshada iyada oo la adeegsanayo fikrado cusub iyo xal waara.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-globe-africa"></i></div>
+                    <h4>🌍 Dhisidda Mustaqbal</h4>
+                    <p>Dhisidda mustaqbal wanaagsan oo ku salaysan wadajir, cadaalad iyo sinnaan bulsho.</p>
+                </div>
+
+                <!-- ===== SADDEX HIMILO OO CUSUB ===== -->
+                <!-- 6 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-heart"></i></div>
+                    <h4>❤️ Daryeelka Bulshada</h4>
+                    <p>Bixinta gargaar iyo daryeel dadka u baahan, gaar ahaan agoonta, waayeelka iyo dadka saboolka ah.</p>
+                </div>
+
+                <!-- 7 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>⚖️ Cadaaladda Bulshada</h4>
+                    <p>U ololeynta cadaaladda, sinnaanta iyo xuquuqda aasaasiga ah ee dhammaan xubnaha bulshada.</p>
+                </div>
+
+                <!-- 8 -->
+                <div class="himilo-card">
+                    <div class="card-icon"><i class="fas fa-tree"></i></div>
+                    <h4>🌳 Ilaalinta Deegaanka</h4>
+                    <p>Dhowrista iyo ilaalinta deegaanka, beerista geedaha iyo ka hortagga nabaad-guurka.</p>
+                </div>
+
+            </div>
+
+            <h3><i class="fas fa-quote-left"></i> Fariinta Bulshada</h3>
+
+            <div class="quote-box">
+                <p>
+                    <i class="fas fa-quote-left"></i>
+                    "Midnimo waa awood, iskaashina waa jidka horumarka.
+                    Marka la isku duubnaado waxaa la gaari karaa guulo waaweyn."
+                    <i class="fas fa-quote-right"></i>
+                    <span class="quote-author">— Beesha Moolkaal</span>
+                </p>
+            </div>
+
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Ku noqo bogga hore</a>
+
+        </div>
+    </div>
+
+    <!-- ========================================
+    FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 Beesha Moolkaal. Midnimo • Dhaqan • Horumar. Dhammaan xuquuqda way dhowran yihiin.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

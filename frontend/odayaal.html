@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Odayaal &amp; Haldoor | Beesha Moolkaal</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* CSS ku saabsan bogga Odayaal & Haldoor */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f0f4f8;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #0B6B3A;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+            .logo-img img {
+                height: 50px;
+                width: auto;
+            }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .mool {
+            color: #FFD700;
+        }
+
+        .kaal {
+            color: #ffffff;
+        }
+
+        .logo-slogan {
+            font-size: 0.75rem;
+            color: #b8d9c0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+            nav ul li a {
+                color: black;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                padding: 8px 14px;
+                border-radius: 30px;
+                transition: background 0.3s;
+            }
+
+                nav ul li a:hover {
+                    background: rgba(255,255,255,0.15);
+                }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 40px 45px;
+            border-radius: 20px;
+            margin: 30px auto;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            max-width: 1000px;
+        }
+
+        h1 {
+            color: #0B6B3A;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            border-bottom: 2px dashed #d0dbe5;
+            padding-bottom: 18px;
+        }
+
+        h2 {
+            color: #0B6B3A;
+            border-bottom: 3px solid #0B6B3A;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: #1e293b;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            ul li {
+                background: #f8fafc;
+                padding: 14px 20px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border-left: 5px solid #0B6B3A;
+                transition: all 0.2s;
+                font-size: 1.05rem;
+            }
+
+                ul li:hover {
+                    background: #e8f5e9;
+                    transform: translateX(6px);
+                }
+
+                ul li strong {
+                    color: #0B6B3A;
+                }
+
+        .write-box {
+            background: #f8fafc;
+            border: 2px dashed #0B6B3A;
+            border-radius: 16px;
+            padding: 25px 25px;
+            margin: 20px 0;
+            min-height: 150px;
+        }
+
+            .write-box p {
+                margin: 6px 0;
+                color: #1e293b;
+            }
+
+        .placeholder {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 12px 0;
+        }
+
+            .feature-list span {
+                background: #e8f5e9;
+                padding: 5px 18px;
+                border-radius: 30px;
+                font-size: 0.9rem;
+                color: #0B6B3A;
+                font-weight: 600;
+            }
+
+        .tip-box {
+            margin-top: 15px;
+            padding: 14px 18px;
+            background: #e8f5e9;
+            border-radius: 12px;
+            border-left: 5px solid #0B6B3A;
+        }
+
+            .tip-box p {
+                margin: 0;
+                font-size: 0.95rem;
+                color: #0a3d22;
+            }
+
+        /* Buttons */
+        .btn-back {
+            display: inline-block;
+            margin-top: 25px;
+            background: #0B6B3A;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            .btn-back:hover {
+                background: #085a30;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(11, 107, 58, 0.3);
+            }
+
+            .btn-back i {
+                margin-right: 8px;
+            }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a2e1a;
+            color: #b8d9c0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-flex {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+
+                nav ul li a {
+                    font-size: 0.85rem;
+                    padding: 6px 12px;
+                }
+
+            .main-content {
+                padding: 20px 18px;
+                margin: 15px 10px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .logo-main {
+                font-size: 1.4rem;
+            }
+
+            .write-box {
+                padding: 18px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 14px 12px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            ul li {
+                padding: 10px 14px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (la mid ah bogga weyn) -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo-img">
+                <img src="images/logo.png" alt="Beesha Moolkaal Logo" onerror="this.style.display='none'" />
+                <span class="logo-text">
+                    <span class="logo-main"><span class="mool">Mool</span><span class="kaal">kaal</span></span>
+                    <span class="logo-slogan">Dhaqan &amp; Horumar</span>
+                </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+
+            <h1>👨‍👩‍👧 Odayaal &amp; Haldoor</h1>
+            <p class="sub-title">⭐ Soo bandhigida odayaasha, culimada, aqoonyahannada iyo haldoorka Beesha Moolkaal</p>
+
+            <!-- Sanduuqa qoraalka -->
+            <!--<div class="write-box">
+                <p><strong>📝 Halkan ku qor warbixintaada.</strong></p>
+                <p class="placeholder">✏️ Waxaad ku dari kartaa qoraal, sawirro iyo xog kale.</p>
+
+                <div class="feature-list">
+                    <span>📄 Qoraal</span>
+                    <span>🖼️ Sawirro</span>
+                    <span>📊 Xog</span>
+                    <span>📎 Lifaaq</span>
+                </div>
+
+                <div class="tip-box">
+                    <p>💡 <strong>Tusaale:</strong> Odayaasha beeshu waxay ka shaqeeyaan midnimo, nabadayn, talo-bixin iyo horumar.</p>
+                </div>
+            </div>-->
+
+            <!-- Magacyada Odayaasha -->
+            <h2>🌟 Magacyada Odayaasha &amp; Haldoorka</h2>
+
+            <p>Beeshu waxay leedahay odayaal iyo haldoor isku jira oo u adeegaya bulshada.:</p>
+
+            <ul>
+                <li><strong>Dr. Cabdulqadir Cabdi Nuur (Falastiin)</strong> – Oday dhakhtar ah, oo ku takhasusay caafimaadka, isla markaana ka tirsan kooxda daryeelka bulshada.</li>
+                <li><strong>Maxamed Xasan Mahdi (Afyare)</strong> – Oday dhaqameed ka tirsan beesha, ku caan ah midnimada iyo talo bixinta.</li>
+                <li><strong>Cismaan Cabdullaahi Maxaad</strong> – Shiikh iyo oday ka tirsan beesha, isagoo sanado badan ku dhaqmay nabadaynta, isku xirka, 
+                iyo wadajirka bulshada, isla markaana lagu kalsoon yahay arrimaha diinta iyo dhex-dhexaadinta dadweynaha..</li>
+                <li><strong>Yusuf Cabdi (Yusuf Gaab)</strong> – Oday haldoor ah oo ka shaqeeya wadajirka iyo horumarinta bulshada.</li>
+                <li><strong>Dr. Axmed Bashiir Isaakh (DR Bashka)</strong> – Dhakhtar iyo haldoor ka tirsan bahda caafimaadka, 
+                isagoo sanado badan u soo adeegay bulshada, si daacad ah iyo khibrad lehna uga shaqeeya daryeelka iyo caafimaadka dadweynaha, 
+                isla markaana door muhiim ah ka ciyaara horumarinta adeegga caafimaadka iyo wacyigelinta bulshada..</li>
+            </ul>
+
+            <!-- Doorkooda -->
+            <h2>🤝 Doorkooda Bulshada</h2>
+
+            <p>Odayaashani waxay ka shaqeeyaan:</p>
+
+            <ul>
+                <li>🤝 Midnimada iyo wadajirka bulshada</li>
+                <li>🕌 Ilaalinta dhaqanka iyo diinta</li>
+                <li>🏥 Daryeelka iyo horumarinta caafimaadka</li>
+                <li>📚 Talo bixinta iyo hagidda jiilasha cusub</li>
+            </ul>
+
+            <!-- Gunaanad -->
+            <h2>🌱 Gunaanad</h2>
+
+            <p>
+                Odayaasha iyo haldoorka beesha waa astaan u ah horumar, aqoon iyo midnimo.
+                Waxay door muhiim ah ka qaataan dhismaha bulshada iyo mustaqbalka jiilasha soo socda.
+            </p>
+
+            <!-- Link -->
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Ku noqo bogga hore</a>
+
+            <div class="footer-text">
+                🌱 Boggan waxaad u isticmaali kartaa inaad ku qorto warbixintaada oo aad ku dartaa wax kasta oo aad rabto.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer (la mid ah bogga weyn) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 Beesha Moolkaal. Midnimo • Dhaqan • Horumar. Dhammaan xuquuqda way dhowran yihiin.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

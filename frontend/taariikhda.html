@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Taariikhda Beesha Moolkaal</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ========================================
+                   CSS GUUD
+                ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8fafc;
+            line-height: 1.8;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+                   HEADER (cusub)
+                ======================================== */
+        header {
+            background: #0B6B3A;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+            .logo-img img {
+                height: 50px;
+                width: auto;
+            }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .mool {
+            color: #FFD700;
+        }
+
+        .kaal {
+            color: #ffffff;
+        }
+
+        .logo-slogan {
+            font-size: 0.75rem;
+            color: #b8d9c0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                padding: 8px 14px;
+                border-radius: 30px;
+                transition: background 0.3s;
+            }
+
+                nav ul li a:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                }
+
+                nav ul li a.active {
+                    background: #FFD700;
+                    color: #0B6B3A;
+                }
+
+        /* ========================================
+                   MAIN CONTENT (Taariikhda)
+                ======================================== */
+        .main-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0f172a;
+        }
+
+        h2 {
+            color: #0B6B3A;
+            margin-top: 25px;
+            border-bottom: 3px solid #0B6B3A;
+            padding-bottom: 8px;
+        }
+
+        .section {
+            background: #ecfdf5;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border-left: 5px solid #0B6B3A;
+        }
+
+        p {
+            color: #334155;
+            font-size: 17px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+            .section ul li {
+                background: white;
+                padding: 10px 15px;
+                margin-bottom: 8px;
+                border-radius: 8px;
+                border-left: 4px solid #0B6B3A;
+                font-size: 16px;
+                /* ===== ANIMATION CUSUB ===== */
+                opacity: 0;
+                transform: translateX(-20px);
+                animation: slideIn 0.5s ease forwards;
+                transition: all 0.3s ease;
+                cursor: default;
+            }
+
+                /* ===== ANIMATION KEENAYA ===== */
+                .section ul li:nth-child(1) {
+                    animation-delay: 0.1s;
+                }
+
+                .section ul li:nth-child(2) {
+                    animation-delay: 0.3s;
+                }
+
+                .section ul li:nth-child(3) {
+                    animation-delay: 0.5s;
+                }
+
+                .section ul li:nth-child(4) {
+                    animation-delay: 0.7s;
+                }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== HOVER (marka la dul dhigo) ===== */
+        .section ul li:hover {
+            background: #e8f5e9;
+            transform: scale(1.02) translateX(5px);
+            box-shadow: 0 4px 15px rgba(11, 107, 58, 0.2);
+            border-left-color: #FFD700;
+        }
+
+        /* Icons oo yar yar oo soo wareegaya marka hover */
+        .section ul li i {
+            transition: transform 0.4s ease;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .section ul li:hover i {
+            transform: rotate(15deg) scale(1.2);
+            color: #0B6B3A;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 25px;
+            background: #0B6B3A;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            .btn-back:hover {
+                background: #064e3b;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(11, 107, 58, 0.3);
+            }
+
+            .btn-back i {
+                margin-right: 8px;
+            }
+
+        /* ========================================
+                   FOOTER
+                ======================================== */
+        footer {
+            background: #0a2e1a;
+            color: #b8d9c0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+            footer p {
+                font-size: 0.9rem;
+                color: #b8d9c0;
+            }
+
+        /* ========================================
+                   RESPONSIVE
+                ======================================== */
+        @media (max-width: 768px) {
+            .header-flex {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+
+                nav ul li a {
+                    font-size: 0.85rem;
+                    padding: 6px 12px;
+                }
+
+            .logo-main {
+                font-size: 1.4rem;
+            }
+
+            .main-container {
+                padding: 20px 18px;
+                margin: 15px 10px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 14px 12px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 12px 14px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .section ul li {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- ========================================
+    HEADER (cusub oo la daray)
+    ======================================== -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo-img">
+                <img src="images/logo.png" alt="Beesha Moolkaal Logo" onerror="this.style.display='none'" />
+                <span class="logo-text">
+                    <span class="logo-main"><span class="mool">Mool</span><span class="kaal">kaal</span></span>
+                    <span class="logo-slogan">Dhaqan &amp; Horumar</span>
+                </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#services"><i class="fas fa-handshake"></i> Services</a></li>
+                    <li><a href="index.html#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================
+    MAIN CONTENT (Taariikhda)
+    ======================================== -->
+    <div class="container">
+        <div class="main-container">
+
+            <h1>📜 Taariikhda Beesha Moolkaal</h1>
+
+            <div class="section">
+                <h2>📖 Hordhac</h2>
+                <p>
+                    Beesha Moolkaal waa mid ka mid ah bulshooyinka Soomaaliyeed ee leh taariikh dheer, dhaqan hodan ah iyo xiriir bulsho oo xooggan.
+                    Waxay caan ku tahay isku xirnaan, wada shaqayn iyo ilaalinta dhaqanka soo jireenka ah.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🌍 Asalka iyo Xiriirka Bulshada</h2>
+                <p>
+                    Beesha waxay leedahay asal iyo xidid dhaqan oo ku dhisan wadajir iyo iskaashi.
+                    Jiilasha kala duwan ayaa si joogto ah u ilaaliyay xiriirka qoysaska, dhaqanka iyo midnimada bulshada.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🏞️ Deegaanka iyo Nolosha</h2>
+                <p>
+                    Bulshada Moolkaal waxay ku nool yihiin deegaano kala duwan, halkaas oo ay ka sameeyaan nolol ku saleysan shaqo, waxbarasho iyo ganacsi.
+                    Waxay si gaar ah u qiimeeyaan nabadda iyo horumarka deegaanka.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🤝 Dhaqan iyo Qiyam</h2>
+                <p>Beesha waxaa lagu yaqaannaa:</p>
+                <ul>
+                    <li><i class="fas fa-handshake"></i> Iskaashi iyo is caawinta bulshada</li>
+                    <li><i class="fas fa-mosque"></i> Ilaalinta diinta iyo dhaqanka suuban</li>
+                    <li><i class="fas fa-users"></i> Xiriir qoys oo adag</li>
+                    <li><i class="fas fa-graduation-cap"></i> Qiimeynta waxbarashada iyo aqoonta</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📜 Taariikh Guud</h2>
+                <p>
+                    Taariikhda beesha Moolkaal waxay ku saleysan tahay horumar joogto ah, isbedel bulsho iyo dadaal lagu ilaalinayo midnimada iyo wadajirka bulshada.
+                    Jiil walba wuxuu door ku lahaa dhismaha iyo horumarinta nolosha bulshada.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>🌱 Gunaanad</h2>
+                <p>
+                    Beesha Moolkaal waa astaan u ah midnimo, dhaqan iyo horumar.
+                    Ilaalinta taariikhda iyo dhaqanka waxay muhiim u tahay jiilasha mustaqbalka.
+                </p>
+            </div>
+
+            <!-- Link back -->
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Ku noqo bogga hore</a>
+
+        </div>
+    </div>
+
+    <!-- ========================================
+    FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 Beesha Moolkaal. Midnimo • Dhaqan • Horumar. Dhammaan xuquuqda way dhowran yihiin.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

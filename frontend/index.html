@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Beesha Moolkaal | IndexedDB</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header id="header">
+        <div class="container header-flex">
+            <div class="logo-img">
+                <img src="images/logo.png" alt="Beesha Moolkaal Logo" onerror="this.style.display='none'" />
+                <span class="logo-text">
+                    <span class="logo-main">
+                        <span class="mool">Mool</span><span class="kaal">kaal</span>
+                    </span>
+                    <span class="logo-slogan">Dhaqan &amp; Horumar</span>
+                </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    MAIN
+    ============================================================ -->
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="container">
+                <p><strong>Beesha Moolkaal waa beel fac weyn oo leh taariikh, dhaqan iyo midnimo soo jireen ah</strong></p>
+                <p><strong>Beeshu waxay door muhiim ah kaga jirtaa bulshada Soomaaliyeed iyadoo lagu yaqaan wadajir, is-caawin iyo horumarinta bulshada</strong></p>
+                <p><strong>Beesha Moolkaal waxay ku suntan tahay isku duubni, ixtiraam, wada noolaansho iyo ka shaqaynta</strong></p>
+                <p><strong>mustaqbal wanaagsan oo ay wadaagaan jiilasha maanta iyo kuwa soo socda</strong></p>
+                <a href="#portfolio" class="btn-primary">
+                    <i class="fas fa-images"></i> Eeg Portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- MOOLKAAL SERVICES -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">🌿 Beesha Moolkaal</h2>
+                <div class="service-cards">
+                    <a href="taariikhda.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-scroll"></i>
+                            <h3>📜 Taariikhda Beesha</h3>
+                            <p>Baro asal-raaca, hidaha iyo dhacdooyinka taariikhiga ah ee Beesha Moolkaal.</p>
+                        </div>
+                    </a>
+                    <a href="sawiro.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-images"></i>
+                            <h3>📸 Sawirro & Muuqaallo</h3>
+                            <p>Maktabad dijitaal ah oo lagu kaydiyo sawirrada iyo muuqaallada taariikhiga ah.</p>
+                        </div>
+                    </a>
+                    <a href="midnimo.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-handshake"></i>
+                            <h3>🤝 Midnimo & Iskaashi</h3>
+                            <p>Xoojinta wadajirka, is-caawinta iyo isku duubnida bulshada.</p>
+                        </div>
+                    </a>
+                    <a href="waxbarasho.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>🎓 Waxbarasho & Horumar</h3>
+                            <p>Taageeridda aqoonta, horumarinta dhalinyarada iyo kobcinta bulshada.</p>
+                        </div>
+                    </a>
+                    <a href="deegaan.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>🗺️ Deegaan & Bulsho</h3>
+                            <p>Macluumaad ku saabsan deegaanka, bulshada iyo horumarka deegaanka ay beeshu degto.</p>
+                        </div>
+                    </a>
+                    <a href="odayaal.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-users"></i>
+                            <h3>👨‍👩‍👧‍👦 Odayaal & Haldoor</h3>
+                            <p>Soo bandhigida odayaasha, culimada, aqoonyahannada iyo haldoorka beesha.</p>
+                        </div>
+                    </a>
+                    <a href="siyaasiin.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-landmark"></i>
+                            <h3>🏛️ Siyaasiinta Beesha</h3>
+                            <p>Soo bandhigida siyaasiyiinta, hoggaamiyeyaasha iyo masuuliyiinta ka soo jeeda Beesha Moolkaal.</p>
+                        </div>
+                    </a>
+                    <a href="nabadoono.html" target="_blank" style="text-decoration:none;color:inherit;">
+                        <div class="card">
+                            <i class="fas fa-dove"></i>
+                            <h3>🕊️ Nabadoonnada Beesha</h3>
+                            <p>Soo bandhigida nabadoonnada iyo waxgaradka Beesha Moolkaal.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">📸 Portfolio-ga Sawirrada & Video-yada</h2>
+                <div id="statsInfo" class="stats-bar"><i class="fas fa-database"></i> Soo gelinta...</div>
+                <div id="portfolioGrid" class="portfolio-grid"></div>
+            </div>
+        </section>
+
+        <!-- UPLOAD -->
+        <section id="upload" class="upload-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-database"></i> Qaybta Admin – IndexedDB (Storage Weyn)</h2>
+                <div class="upload-box">
+                    <div class="type-selector">
+                        <button type="button" id="typeImageBtn" class="type-btn active"><i class="fas fa-image"></i> Sawir</button>
+                        <button type="button" id="typeVideoBtn" class="type-btn"><i class="fas fa-video"></i> Video</button>
+                    </div>
+                    <input type="hidden" id="mediaType" value="image">
+                    <div class="form-group">
+                        <label>Cinwaan (Title)</label>
+                        <input type="text" id="title" placeholder="Tusaale: Kampani Qoyska 2025" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sharaxaad (Description)</label>
+                        <textarea id="desc" rows="3" placeholder="Wax yar ka sheeg..."></textarea>
+                    </div>
+                    <div id="imageField" class="form-group">
+                        <label>Sawirka (Image) *</label>
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <div id="videoField" class="form-group" style="display: none;">
+                        <label>Video (YouTube link ama File upload)</label>
+                        <input type="text" id="videoUrl" placeholder="https://www.youtube.com/watch?v=...">
+                        <input type="file" id="videoUpload" accept="video/*" style="margin-top: 10px;">
+                        <small>YouTube link ma culaan storage-ka!</small>
+                    </div>
+                    <button type="button" id="submitUploadBtn" class="btn-submit"><i class="fas fa-cloud-upload-alt"></i> Ku Dar Portfolio-ga</button>
+                    <div id="messageBox" class="message-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN PANEL TOGGLE -->
+        <div class="admin-panel-toggle">
+            <button id="unlockAdminBtn" class="admin-btn"><i class="fas fa-key"></i> Fur Qaybta Admin (Upload & Delete)</button>
+        </div>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">📞 Nagala Soo Xiriir</h2>
+                <p><i class="fas fa-envelope"></i> moolkaal7@gmail.com &nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> +252 61 2477474</p>
+                <p><strong>Beesha Moolkaal. Jiilkii hore, jiilka maanta iyo jiilka mustaqbalka.</strong></p>
+                <p>Waxaan halkaan ku soo gudbinaynaa taariikhda, dhaqanka, iyo horumarka Beesha Faca Weyn ee Moolkaal!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 Beesha Moolkaal. Midnimo • Dhaqan • Horumar. Dhammaan xuquuqda way dhowran yihiin.</p>
+        </div>
+    </footer>
+
+    <!-- PASSWORD MODAL -->
+    <div class="password-modal" id="passwordModal">
+        <div class="password-card">
+            <h3>🔐 Geli Password</h3>
+            <p>Geli password-ka si aad u hesho awoodda admin-ka</p>
+            <input type="password" id="adminPassword" placeholder="Password" />
+            <button class="btn-submit" id="confirmPasswordBtn"><i class="fas fa-check"></i> Xaqiiji</button>
+            <button class="admin-btn" id="closePasswordModalBtn" style="margin-top: 10px;"><i class="fas fa-times"></i> Xir</button>
+            <div id="passwordError"></div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
